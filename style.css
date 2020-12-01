@@ -3,11 +3,11 @@
 }
 
 :root {
-  --main-white-color: #b3ffff;
+  --main-red-color: #cc0000;
 }
 
-.main-white-color {
-  color: var(--main-white-color);
+.main-red-color {
+  color: var(--main-red-color);
 }
 
 html {
@@ -32,8 +32,8 @@ body. html {
 
 .container {
   width: 600px;
-  height: 600px;
-  background-color: #f30c0c;
+  height: 800px;
+  background-color: #ffdf80;
   border-radius: 4px;
   padding: 32px;
 }
@@ -52,13 +52,15 @@ body. html {
 
 .header-title {
   flex: 1;
+  text-align: center;
 }
 
 .header-btn {
   font-size: 1.8rem;
   font-family: "texturina", sans-serif;
 
-  padding: 24px;
+  padding: 16px;
+  cursor: pointer;
 
   background: unset;
   border: unset;
@@ -69,4 +71,39 @@ body. html {
   text-align: center;
   font-size: 3.6rem;
   font-family: "kaushan script", sans-serif;
+}
+
+.add {
+  padding: 16px;
+}
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+
+  flex: 1;
+
+  border-bottom: solid 1px var(--main-red-color);
+  outline: unset;
+
+  font-family: "kaushan script", sans-serif;
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.add-btn {
+  font-size: 1.8rem;
+  font-family: "texturina", sans-serif;
+
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
 }
