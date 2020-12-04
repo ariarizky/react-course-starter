@@ -4,10 +4,14 @@
 
 :root {
   --main-red-color: #cc0000;
+  --main-black-color: #484848;
 }
 
 .main-red-color {
   color: var(--main-red-color);
+}
+.main-black-color {
+  color: var(--main-black-color);
 }
 
 html {
@@ -31,6 +35,7 @@ body. html {
 }
 
 .container {
+  margin-top: 20px;
   width: 600px;
   height: 800px;
   background-color: #ffdf80;
@@ -39,10 +44,11 @@ body. html {
 }
 
 .frame {
-  border: 1px solid #484848;
+  border: 1px solid var(--main-black-color);
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -53,6 +59,9 @@ body. html {
 .header-title {
   flex: 1;
   text-align: center;
+
+  font-size: 3.6rem;
+  font-family: "kaushan script", sans-serif;
 }
 
 .header-btn {
@@ -67,18 +76,18 @@ body. html {
   outline: unset;
 }
 
-.header-title {
-  text-align: center;
-  font-size: 3.6rem;
-  font-family: "kaushan script", sans-serif;
+.header-btn.main-red-color:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
 }
-
+.header-btn:active {
+  text-shadow: 1px 1px 2px #484848;
+}
 .add {
   padding: 16px;
 }
 .add-form {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .add-input {
   background: unset;
@@ -106,4 +115,26 @@ body. html {
   background: unset;
   border: unset;
   outline: unset;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "kaushan script", sans-serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--main-red-color);
+}
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
